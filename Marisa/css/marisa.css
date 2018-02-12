@@ -1,0 +1,100 @@
+/* reset */
+ody{ margin:0;padding:0;background:#f4f6e8; }
+
+/**** 聊天框外框 ****/
+#box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-256px;
+    margin-left:-356px;  
+    width:712px;
+    height:512px;
+    background:#cccc99; 
+    border:1px solid #022c60;
+}
+#vessel{
+    display:flex;
+    justify-content:space-between;  
+    margin:0 auto;
+    margin-top:6px;
+    width:700px;
+    height:502px;
+}
+
+/* 左边聊天框 */
+#talk-panel{
+    width:470px;
+    height:500px;
+    background:#f5f7ea; 
+    border:1px solid #022c60;
+}
+    #talk-panel > span{
+        display:block;
+        width:100%;
+        height:40px;
+        background:#d1d9c1; 
+        border-bottom:1px solid #022c60;
+        font-size:14px;
+        line-height:40px; 
+        text-indent:9px; 
+        color:#022c60;
+    }
+    #talk-place{
+        width:100%;
+        height:420px;
+        overflow-y:scroll; 
+    }
+    #talk{
+        width:100%;
+        height:39px;
+    }
+        #talk > input[name='you']{
+            position:relative; 
+            left:5px;
+            top:10px;
+            width:382px;
+            height:20px;
+        }
+        #talk > input[type='submit']{
+            position:relative; 
+            left:15px; 
+            top:12px; 
+            width:48px;
+            height:22px; 
+        }
+#avatar-cmd{
+    width:220px;
+    height:502px;
+}
+    #avatar{
+        width:218px;
+        height:250px;
+        border:1px solid #022c60;
+        background:url(img/marisa.jpg) no-repeat;
+        background-size:333px;
+        background-position:58% 2%; 
+        margin-bottom:8px; 
+    }
+    #cmd{
+        width:202px;
+        height:232px;
+        padding:4px 8px;
+        background:#f5f7ea; 
+        border:1px solid #022c60;
+        color:#022c60;
+        font-size:12px;
+    }
+        #cmd span{
+            display:block;
+            width:100%; 
+            margin-bottom:7px;
+        }
+        .cmd-collect{
+            text-decoration:line-through;
+            text-indent:1em; 
+        }
+            .marisa-cmd{
+                display:inline !important; 
+                font-weight:bold; 
+            }
