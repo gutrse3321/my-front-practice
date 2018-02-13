@@ -1,0 +1,149 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 50px 0;
+  background: #fff;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #555;
+  -webkit-font-smoothing: antialiased; /* 字体抗锯齿 */
+}
+.slider,
+.slider section,
+.slider section figure {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+/* 幻灯片区域 */
+.slider section {
+  overflow: hidden;
+}
+.slider figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.slider figure figcaption {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  z-index: 9;
+}
+.slider figure figcaption h2 {
+  font-size: 40px;
+  line-height: 50px;
+  color: #B5B5B5;
+  text-align: right;
+  font-family: 'Comic Sans MS'
+}
+.slider figure figcaption h3 {
+  font-size: 70px;
+  line-height: 70px;
+  color: #000;
+  text-align: right;
+  font-family: 'Bradley Hand ITC';
+}
+
+/* 按钮区域 */
+.slider .ctrl {
+  width: 100%;
+  height: 13px;
+  line-height: 13px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+}
+.slider .ctrl-i {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 13px;
+  background: #666;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  transition: all .3s;
+}
+.slider .ctrl-i img {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  transition: all .3s;
+  opacity: 0;
+  z-index: 1;
+}
+.slider .ctrl-i:hover {
+  background: #f0f0f0;
+}
+.slider .ctrl-i:hover img{
+  bottom: 13px;
+  opacity: 1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .6);
+  -webkit-box-reflect: below 0px 
+  -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(transparent),
+    color-stop(50%, transparent),
+    to(rgba(255, 255, 255, .3))
+  );
+}
+/* 
+  -webkit-box-reflect: below（倒影方向：底边） 0px
+  -webkit-gradient(遮罩,渐变)(
+    linear, 线性渐变
+    left top, 起始位置
+    left bottom, 结束为止
+    from(transparent), 开始颜色
+    color-stop(50%, transparent), 中间位置 过渡点 颜色
+    to(rgba(255,255,255,.3) 结束颜色
+  ) 
+*/
+
+/* 选中 active状态 */
+.ctrl-i-active,
+.ctrl-i-active:hover {
+  background: #000 !important;
+}
+.ctrl-i-active:hover img {
+  opacity: 0 !important;
+}
+
+/* section 幻灯片切换样式 */
+section figure {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transition: all .5s;
+}
+/* 标题文字 */
+section figure h2,
+section figure h3 {
+  opacity: 0;
+  transition: all .3s;
+  transition-delay: .5s;
+}
+section figure h2 {
+  transform: translate(80px, 0);
+}
+section figure h3 {
+  transform: translate(-80px, 0);
+}
+/* 幻灯片所有过渡动画 */
+.figure-active {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+.figure-active h2,
+.figure-active h3 {
+  opacity: 1;
+  transform: none !important;
+}
