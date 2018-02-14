@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>wheel 鼠标滚轮事件学习</title>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <script>
+    // 非火狐内核
+    // 火狐内核暂不考虑
+    // event.wheelDelta
+    // 正数：向上滚动
+    // 滚动一次的值：120
+    document.body.onmousewheel = function (event) {
+      event = event || window.event
+      console.log('事件: onmousewheel')
+      console.log(event)
+      console.log(`event.detail数值：${event.detail}`)
+      console.log(`event.wheelDelta数值：${event.wheelDelta}`)
+    }
+
+    // 获取scrollTop
+    function scrollTop (value) {
+      if (value === null) {
+        // body和html取最大值
+        return Math.max(document.body.scrollTop, document.documentElement.scrollTop)
+      } else {
+        document.body.scrollTop = document.documentElement = value
+      }
+    }
+  </script>
+</body>
+</html>
