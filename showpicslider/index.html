@@ -9,28 +9,19 @@
 </head>
 <body>
   <div class="slider">
-    <section>
-      <figure>
+    <!-- 设置为模板 -->
+    <section id="template-section">
+      <figure id="figure-{{index}}" class="getfigure {{css}}">
         <figcaption>
-          <h2>h2 caption</h2>
-          <h3>h3 caption</h3>
+          <h2>{{h2}}</h2>
+          <h3>{{h3}}</h3>
         </figcaption>
-        <img src="images/1.jpg">
-      </figure>
-      <figure>
-        <figcaption>
-          <h2>h2 caption</h2>
-          <h3>h3 caption</h3>
-        </figcaption>
-        <img src="images/1.jpg">
+        <img src="images/{{index}}.jpg" class="get-img">
       </figure>
     </section>
-    <div class="ctrl">
-      <a class="ctrl-i" href="javascript:;">
-        <img src="images/1.jpg">
-      </a>
-      <a class="ctrl-i" href="javascript:;">
-        <img src="images/1.jpg">
+    <div class="ctrl" id="template-ctrl">
+      <a class="ctrl-i" id="ctrl-{{index}}" href="javascript:switchSlider({{index}});">
+        <img src="images/{{index}}.jpg">
       </a>
     </div>
   </div>

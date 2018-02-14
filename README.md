@@ -6,4 +6,4 @@
 - [图片移入各种动画显示消息](https://gutrse3321.github.io/my-front-practice/phototextshow/)
 - [阴影，曲线阴影、翘边阴影](https://gutrse3321.github.io/my-front-practice/boxshadow/)
 ## JS
-- [<del>底部移入预览图幻灯片</del>(未完成)](https://gutrse3321.github.io/my-front-practice/showpicslider/)
+- [底部移入预览图幻灯片](https://gutrse3321.github.io/my-front-practice/showpicslider/)
