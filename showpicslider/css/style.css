@@ -81,7 +81,7 @@ body {
   width: 100%;
   transition: all .3s;
   opacity: 0;
-  z-index: 1;
+  z-index: 9;
 }
 .slider .ctrl-i:hover {
   background: #f0f0f0;
