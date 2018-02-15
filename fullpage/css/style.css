@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 /* index */
@@ -21,4 +22,10 @@ div:nth-child(3) {
 }
 div:nth-child(4) {
   background: #66CD00;
+}
+div:nth-child(5) {
+  background: #8B6914;
+}
+div:nth-child(6) {
+  background: #292929;
 }

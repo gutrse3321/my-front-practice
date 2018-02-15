@@ -7,4 +7,4 @@
 - [阴影，曲线阴影、翘边阴影](https://gutrse3321.github.io/my-front-practice/boxshadow/)
 ## JS
 - [底部移入预览图幻灯片](https://gutrse3321.github.io/my-front-practice/showpicslider/)
-- [<del>单页全屏滚动</del>(学习wheel事件中)](https://gutrse3321.github.io/my-front-practice/fullpage/)
+- [单页全屏滚动(完成，具体学习思路请看wheel.html)](https://gutrse3321.github.io/my-front-practice/fullpage/)

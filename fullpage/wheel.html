@@ -13,28 +13,96 @@
   <div></div>
   <div></div>
   <script>
-    // 非火狐内核
-    // 火狐内核暂不考虑
-    // event.wheelDelta
-    // 正数：向上滚动
-    // 滚动一次的值：120
-    document.body.onmousewheel = function (event) {
-      event = event || window.event
-      console.log('事件: onmousewheel')
-      console.log(event)
-      console.log(`event.detail数值：${event.detail}`)
-      console.log(`event.wheelDelta数值：${event.wheelDelta}`)
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+      // 获取body和html的DOM，用于取得每页的scrollTop高度
+      var body = document.body,
+          html = document.documentElement
+      // 定时器定义 网页内容可见高度和当前页数的定义给移动动画用
+      var ttstop,
+          offsetH = document.body.offsetHeight
+      // 获取每页的scrollTop高度与网页内容可见高度相除，取得当前第几页（0 - 3）
+      var pageNum = scrollTop() / offsetH | 0
+      // 窗口大小改变事件
+      addEventListener('resize', myResize, false)
+      myResize()
 
-    // 获取scrollTop
-    function scrollTop (value) {
-      if (value === null) {
-        // body和html取最大值
-        return Math.max(document.body.scrollTop, document.documentElement.scrollTop)
-      } else {
-        document.body.scrollTop = document.documentElement = value
+      // 非火狐内核
+      // 火狐内核暂不考虑
+      // event.wheelDelta
+      // 正数：向上滚动
+      // 滚动一次的值：120
+      document.body.addEventListener(
+        'mousewheel',
+        function (event) {
+          clearTimeout(ttstop)
+          event = event || window.event    
+          // // 获取当前滚动到的第几页
+          // console.log(`滚动到第：${pageNum}页`)
+          // // 网页内容可见高度，不含浏览器状态栏
+          // console.log(offsetH)
+          // // 网页内容实际高度，就是整个滚动完的高度
+          // console.log(document.body.scrollHeight)
+          // // 获取页的总数
+          // console.log((document.body.scrollHeight / offsetH | 0) - 1)
+
+          // console.log('事件: onmousewheel')
+          // console.log(event)
+          // console.log(`event.wheelDelta数值：${event.wheelDelta}`)
+
+          ttstop = setTimeout(function () {
+            // 取值 1 向上滚动， -1 向下滚动
+            var deltail = event.wheelDelta / 120
+            pageNum -= deltail
+            // 获取页面的总数
+            var pageCount = (document.body.scrollHeight / offsetH | 0) - 1
+            
+            if (pageNum < 0) {
+              return pageNum = 0
+            }
+            if (pageNum > pageCount) {
+              return pageNum = pageCount
+            }
+            movePage()
+          }, 100)
+          event.preventDefault();
+        }
+      )
+
+      // 获取scrollTop,得到滚动到第几页了
+      function scrollTop (v) {
+        // 两个等号仅判断是否为空。三个则更严格，详情可查看JavaScript高级编程这个本书
+        if (v == null) {
+          // body和html取最大值
+          return Math.max(document.body.scrollTop, document.documentElement.scrollTop)
+        } else {
+          body.scrollTop = html.scrollTop = v
+        }
+        console.log(v)
       }
-    }
+
+      // 平滑移动
+      function movePage () {
+        var value = offsetH * pageNum
+        // 获取需要移动的距离数
+        var num = scrollTop() - value;
+        console.log(value - num);
+        (function callme () {
+          num = num / 1.2 | 0
+          scrollTop(value + num)
+          if (num) {
+            ttstop = setTimeout(callme, 16)
+          }
+        })();
+        console.log('移动：'+ num)
+      }
+
+      // 窗口变化事件
+      function myResize () {
+        offsetH = body.offsetHeight
+        // console.log(offsetH)
+        movePage()
+      }
+    })
   </script>
 </body>
 </html>
