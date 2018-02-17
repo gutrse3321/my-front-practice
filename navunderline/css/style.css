@@ -1,11 +1,47 @@
 /* reset */
 html,
-body {
+body,
+ul {
   margin: 0;
   padding: 0;
 }
-ul {
-  list-style: none;
-}
 
 /* index */
+nav {
+  margin-top: 20%;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+ul li:not(:last-child) {
+  margin-right: 30px;
+  font-family: sans-serif;
+}
+
+ul li a {
+  display: block;
+  font-size: 20px;
+  color: rgba(0, 0, 0, .3);
+  text-decoration: none;
+  transition: all .3s;
+}
+ul li a:hover {
+  color: rgba(0, 0, 0, .8);
+}
+
+#target {
+  position: absolute;
+  width: 50px;
+  border-bottom: 4px solid transparent;
+  transform: translate(-60px, 0);
+  background: #000;
+  transition: all .3s;
+  transition-delay: .5;
+}
+
+.active {
+  color: rgba(0, 0, 0, .8) !important;
+}

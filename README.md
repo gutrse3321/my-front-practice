@@ -8,4 +8,4 @@
 ## JS
 - [底部移入预览图幻灯片](https://gutrse3321.github.io/my-front-practice/showpicslider/)
 - [单页全屏滚动(完成，具体学习思路请看wheel.html)](https://gutrse3321.github.io/my-front-practice/fullpage/)
-- [<del>菜单下划线跟随移动</del>(过年中...AppMyRPG曾写过,不过是纯CSS3的,数值是固定的)](https://gutrse3321.github.io/my-front-practice/navunderline/)
+- [菜单下划线跟随移动(AppMyRPG曾写过,这是修改版)](https://gutrse3321.github.io/my-front-practice/navunderline/)
