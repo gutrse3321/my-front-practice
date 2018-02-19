@@ -45,6 +45,8 @@ for(var i = 0; i < links.length; i++) {
   links[i].addEventListener('mouseover', moveLine)
   links[i].addEventListener('mouseout', backActive)
 }
+// 全局注册事件
+window.addEventListener('resize', backActive)
 
 // 初始化
 window.onload = function () {

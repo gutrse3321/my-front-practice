@@ -40,7 +40,7 @@
       position: absolute;
       border-bottom: 4px solid transparent;
       transform: translateX(-60px);
-      transition: all .35s ease-in-out;
+      transition: all .35s ease-out;
       width: 50px;
       background: #000;
     }
@@ -115,7 +115,7 @@
       target[0].style.transform = `translate(${left}px, 0)`
     }
 
-    // 鼠标移出事件
+    // 鼠标移出事件,窗口大小改变事件用
     // 遍历链接，查询类中是否有active
     // 存在就移动到他那去
     function backActive () {
@@ -140,6 +140,9 @@
       links[i].addEventListener('mouseover', moveLine)
       links[i].addEventListener('mouseout', backActive)
     }
+    // 全局注册事件
+    window.addEventListener('resize', backActive)
+
     // 初始化下划线设置到active的位置
     window.onload = function () {
       backActive()
