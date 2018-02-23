@@ -5,7 +5,7 @@
 - [白丝魔理沙(按照以前截图基本还原前端)](https://gutrse3321.github.io/my-front-practice/Marisa/)
 - [图片移入各种动画显示消息](https://gutrse3321.github.io/my-front-practice/phototextshow/)
 - [阴影，曲线阴影、翘边阴影](https://gutrse3321.github.io/my-front-practice/boxshadow/)
-- [<del>全屏视差滚动</del>(年假中...)](https://gutrse3321.github.io/my-front-practice/parallax/)
+- [全屏视差滚动(稍微松懈了...不能这样.)](https://gutrse3321.github.io/my-front-practice/parallax/)
 ## JS
 - [底部移入预览图幻灯片](https://gutrse3321.github.io/my-front-practice/showpicslider/)
 - [单页全屏滚动(完成，具体学习思路请看wheel.html)](https://gutrse3321.github.io/my-front-practice/fullpage/)

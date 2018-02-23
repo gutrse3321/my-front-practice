@@ -1,0 +1,99 @@
+/* reset */
+html,body,
+section,figure,article {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+section,figure,article {
+  display: block;
+}
+
+/* index */
+html * {
+  /* 仅考虑chrome */
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: #3d3536;
+}
+
+.main-box {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.fixed-bg h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  color: #fff;
+}
+  .fixed-bg.fixed-bg-1 {
+    background-image: url(../img/1.jpg);
+  }
+  .fixed-bg.fixed-bg-2 {
+    background-image: url(../img/2.jpg);
+  }
+  .fixed-bg.fixed-bg-3 {
+    background-image: url(../img/3.jpg);
+  }
+  .fixed-bg.fixed-bg-4 {
+    background-image: url(../img/4.jpg);
+  }
+
+.scroll-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 2;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+  z-index: 2;
+}
+  .scroll-bg.scroll-bg-color-1 {
+    background: #3d3536;
+    color: #a6989a;
+  }
+  .scroll-bg.scroll-bg-color-2 {
+    background: #99a478;
+    color: #3d3536;
+  }
+  .scroll-bg.scroll-bg-color-3 {
+    background: #b4d7a8;
+    color: #3d3536;
+  }
+  .scroll-bg article {
+    /* 设置文章的宽度最大为768px，百分比使他缩小时不会贴边 */
+    width: 90%;
+    max-width: 768px;
+    margin: 0 auto;
+}
