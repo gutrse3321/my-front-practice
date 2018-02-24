@@ -42,7 +42,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   z-index: 1;
 }
 
@@ -96,4 +95,9 @@ body {
     width: 90%;
     max-width: 768px;
     margin: 0 auto;
+}
+@media screen and (min-width: 1170px) {
+  .fixed-bg {
+    background-attachment: fixed;
+  }
 }
