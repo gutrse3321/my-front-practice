@@ -6,8 +6,9 @@ ody{ margin:0;padding:0;background:#f4f6e8; }
     position: absolute;
     top:50%;
     left:50%;
-    margin-top:-256px;
-    margin-left:-356px;  
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
     width:712px;
     height:512px;
     background:#cccc99; 
