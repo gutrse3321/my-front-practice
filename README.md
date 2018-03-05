@@ -46,4 +46,28 @@
 - [单页全屏滚动(完成，具体学习思路请看wheel.html)](https://gutrse3321.github.io/my-front-practice/fullpage/)
 - [菜单下划线跟随移动(AppMyRPG曾写过,这是修改版,具体学习思路在underline.html)](https://gutrse3321.github.io/my-front-practice/navunderline/)
 ## Plugins(ES6)
-- [<del>单页全屏滚动插件</del>(写了下最最最原始结构)](https://gutrse3321.github.io/my-front-practice/tomo-fullpage/)
+- [单页全屏滚动插件(使用部分ESLint规范)](https://gutrse3321.github.io/my-front-practice/tomo-fullpage/)
+```html
+<!-- 使用方法 -->
+<!-- 需要将父元素和子元素的宽高设置为100% -->
+<!-- 
+  el: 需要操作父DOM
+  speed: 页面移动速度(事件)
+  wait: 需要多少时间开始下一次移动 
+-->
+<main class="wrapper">
+  <section>第一个</section>
+  <section>第二个</section>
+  <section>第三个</section>
+  <section>第四个</section>
+</main>
+<script src="src/fullpage.js"></script>
+<script>
+  let wrapper = document.querySelector('.wrapper')
+  let fullpage = new TomoFullPage({
+    el: wrapper,
+    speed: '.5s',
+    wait: 100
+  })
+</script>
+```
