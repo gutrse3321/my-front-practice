@@ -5,11 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>测试全屏滚动插件</title>
+  <style>
+    body,html,.wrapper {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+    .wrapper section:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      background: #f0f;
+    }
+    .wrapper section:nth-child(2) {
+      width: 100%;
+      height: 100%;
+      background: #ccc;
+    }
+    .wrapper section:nth-child(3) {
+      width: 100%;
+      height: 100%;
+      background: #ff0;
+    }
+    .wrapper section:nth-child(4) {
+      width: 100%;
+      height: 100%;
+      background: #0ff;
+    }
+  </style>
 </head>
 <body>
+  <main class="wrapper">
+    <section>第一个</section>
+    <section>第二个</section>
+    <section>第三个</section>
+    <section>第四个</section>
+  </main>
   <script src="src/fullpage.js"></script>
   <script>
-    
+    let wrapper = document.querySelector('.wrapper')
+    let fullpage = new TomoFullPage({
+      el: wrapper,
+      speed: '.5s',
+      wait: 100
+    })
   </script>
 </body>
 </html>
