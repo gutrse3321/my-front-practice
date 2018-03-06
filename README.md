@@ -46,7 +46,7 @@
 - [单页全屏滚动(完成，具体学习思路请看wheel.html)](https://gutrse3321.github.io/my-front-practice/fullpage/)
 - [菜单下划线跟随移动(AppMyRPG曾写过,这是修改版,具体学习思路在underline.html)](https://gutrse3321.github.io/my-front-practice/navunderline/)
 ## Plugins(ES6)
-- [单页全屏滚动插件(使用部分ESLint规范)](https://gutrse3321.github.io/my-front-practice/tomo-fullpage/)
+- [单页全屏滚动插件(添加新功能结构)](https://gutrse3321.github.io/my-front-practice/tomo-fullpage/)
 ```html
 <!-- 使用方法 -->
 <!-- 需要将父元素和子元素的宽高设置为100% -->
