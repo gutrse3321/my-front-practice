@@ -1,0 +1,118 @@
+/* 容器 */
+.container {
+  margin: 0 auto;
+  max-width: 120.0rem;
+  padding: 0 2.0rem;
+  width: 100%;
+}
+
+/* 行 */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+/* 对齐方式 */
+.row .row-top {
+  align-items: flex-start;
+}
+.row .row-middle {
+  align-items: center;
+}
+.row .row-bottom {
+  align-items: flex-end;
+}
+.row .row-stretch {
+  align-items: stretch;
+}
+.row .row-baseline {
+  align-items: baseline;
+}
+.row .row-left {
+  justify-content: flex-start;
+}
+.row .row-center {
+  justify-content: center;
+}
+.row .row-right {
+  justify-content: flex-end;
+}
+.row .row-between {
+  justify-content: space-between;
+}
+.row .row-around {
+  justify-content: space-around;
+}
+
+/* 列 */
+.column {
+  display: block;
+  flex: 1;
+}
+/* 栅栏系统和偏移 */
+.column .col-1 {
+  flex: 0 0 calc(100% * 1 / 12);
+}
+.column .col-2 {
+  flex: 0 0 calc(100% * 2 / 12);
+}
+.column .col-3 {
+  flex: 0 0 calc(100% * 3 / 12);
+}
+.column .col-4 {
+  flex: 0 0 calc(100% * 4 / 12);
+}
+.column .col-5 {
+  flex: 0 0 calc(100% * 5 / 12);
+}
+.column .col-6 {
+  flex: 0 0 calc(100% * 6 / 12);
+}
+.column .col-7 {
+  flex: 0 0 calc(100% * 7 / 12);
+}
+.column .col-8 {
+  flex: 0 0 calc(100% * 8 / 12);
+}
+.column .col-9 {
+  flex: 0 0 calc(100% * 9 / 12);
+}
+.column .col-10 {
+  flex: 0 0 calc(100% * 10 / 12);
+}
+.column .col-11 {
+  flex: 0 0 calc(100% * 11 / 12);
+}
+
+.column .col-off-1 {
+  margin-left: calc(100% * 1 / 12); 
+}
+.column .col-off-2 {
+  margin-left: calc(100% * 2 / 12); 
+}
+.column .col-off-3 {
+  margin-left: calc(100% * 3 / 12); 
+}
+.column .col-off-4 {
+  margin-left: calc(100% * 4 / 12); 
+}
+.column .col-off-5 {
+  margin-left: calc(100% * 5 / 12); 
+}
+.column .col-off-6 {
+  margin-left: calc(100% * 6 / 12); 
+}
+.column .col-off-7 {
+  margin-left: calc(100% * 7 / 12); 
+}
+.column .col-off-8 {
+  margin-left: calc(100% * 8 / 12); 
+}
+.column .col-off-9 {
+  margin-left: calc(100% * 9 / 12); 
+}
+.column .col-off-10 {
+  margin-left: calc(100% * 10 / 12); 
+}
+.column .col-off-11 {
+  margin-left: calc(100% * 11 / 12); 
+}

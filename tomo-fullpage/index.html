@@ -33,12 +33,6 @@
       height: 100%;
       background: #0ff;
     }
-    ul {
-      display: block;
-      position: fixed;
-      right: 0;
-      top: 50%;
-    }
   </style>
 </head>
 <body>
@@ -48,29 +42,14 @@
     <section>第三个</section>
     <section>第四个</section>
   </main>
-  <ul>
-    <li class="touchme">上一页</li>
-    <li class="touchme">下一页</li>
-  </ul>
-  <script src="src/fullpage.js"></script>
+  <script src="G:/HTML5/tomo-fullpage/src/tomofullpage.js"></script>
   <script>
     let wrapper = document.querySelector('.wrapper')
-    let li = document.querySelectorAll('.touchme')
     let fullpage = new TomoFullPage({
-      el: wrapper,
+      mainEl: wrapper,
       speed: '.5s',
       wait: 100
     })
-
-    li[0].addEventListener('click', e => {
-      fullpage.currentPage--
-      fullpage.movePage()
-    })
-    li[1].addEventListener('click', e => {
-      fullpage.currentPage++
-      fullpage.movePage()
-    })
-
   </script>
 </body>
 </html>

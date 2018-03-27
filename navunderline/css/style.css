@@ -36,7 +36,7 @@ ul li a:hover {
   position: absolute;
   width: 50px;
   border-bottom: 4px solid transparent;
-  transform: translate(-60px, 0);
+  transform: translate(0px, 0);
   background: #000;
   transition: all .3s;
   transition-delay: .5;
