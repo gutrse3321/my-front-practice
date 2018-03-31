@@ -1,3 +1,10 @@
+/* reset */
+body,html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+}
 /* 容器 */
 .container {
   margin: 0 auto;
@@ -47,6 +54,7 @@
 .column {
   display: block;
   flex: 1;
+  background: #ccc;
 }
 /* 栅栏系统和偏移 */
 .column .col-1 {
